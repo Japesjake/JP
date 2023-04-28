@@ -5,8 +5,8 @@
 </script>
 
 <table>
-    <Row slug = {slug} y = 'top'/>
-    <Row slug = {slug} y = 'mid'/>
-    <Row slug = {slug} y = 'bot'/>
+    <Row slug = {slug} />
+    <Row slug = {slug} />
+    <Row slug = {slug} />
 </table>
 
