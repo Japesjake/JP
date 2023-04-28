@@ -10,12 +10,13 @@
         bot.split('')
     ]
     let symbol = data[x][y];
-    console.log(symbol)
 </script>
 <a href='/'>
-<div style='height: 50px; width:50px; background-color: black; margin: 1px;'></div>
+<div style='height: 50px; width:50px; background-color: black;'>
+    {#if symbol == 'x'}
+        <div style='font-size: 50px;'>
+            &#10060
+        </div>
+    {/if}
+</div>
 </a>
-{#if symbol == 'x'}
-    &#10060
-{/if}
-

@@ -4,7 +4,7 @@
 </script>
 
 <table>
-    <Row y = 0/>
-    <Row y = 1/>
-    <Row y = 2/>
+    <Row x = 0/>
+    <Row x = 1/>
+    <Row x = 2/>
 </table>
