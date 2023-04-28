@@ -1,12 +1,10 @@
 <script>
     export let data;
     import Row from '/src/lib/Row.svelte';
-    let slug = data.slug
 </script>
 
 <table>
-    <Row slug = {slug} />
-    <Row slug = {slug} />
-    <Row slug = {slug} />
+    <Row y = 0/>
+    <Row y = 1/>
+    <Row y = 2/>
 </table>
-

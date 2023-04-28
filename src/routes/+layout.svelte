@@ -8,4 +8,5 @@
 
 <slot />
 
+<a href="https://www.flaticon.com/free-icons/spirituality" title="spirituality icons">Icons created by Freepik - Flaticon</a>
 <p>Email: japesjake@gmail.com</p>
