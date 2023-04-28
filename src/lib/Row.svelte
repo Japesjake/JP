@@ -1,10 +1,10 @@
 <script>
     import Cell from '/src/lib/Cell.svelte'
-    export let slug;
+    export let y;
 </script>
 
 <tr>
-    <td><Cell slug = {slug} /></td>
-    <td><Cell slug = {slug} /></td>
-    <td><Cell slug = {slug} /></td>
+    <td><Cell x = 0 /></td>
+    <td><Cell x = 1 /></td>
+    <td><Cell x = 2 /></td>
 </tr>
