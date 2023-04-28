@@ -14,7 +14,7 @@
 <a href='/'>
 <div style='height: 50px; width:50px; background-color: black;'>
     {#if symbol == 'x'}
-        <div style='font-size: 50px;'>
+        <div style='font-size: 30px; padding-left: 10px; padding-top: 7px'>
             &#10060
         </div>
     {/if}
