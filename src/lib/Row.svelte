@@ -1,10 +1,11 @@
 <script>
     import Cell from '/src/lib/Cell.svelte'
-    export $: top, mid, bot;
+    export let slug;
+    export let y;
 </script>
 
 <tr>
-    <td><Cell top = {top} mid = {mid} bot = {bot} /></td>
-    <td><Cell top = {top} mid = {mid} bot = {bot} /></td>
-    <td><Cell top = {top} mid = {mid} bot = {bot} /></td>
+    <td><Cell slug = {slug} x = 'left'/></td>
+    <td><Cell slug = {slug} x = 'mid'/></td>
+    <td><Cell slug = {slug} x = 'right'/></td>
 </tr>

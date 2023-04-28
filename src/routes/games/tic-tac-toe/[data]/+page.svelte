@@ -1,14 +1,12 @@
 <script>
     export let data;
     import Row from '/src/lib/Row.svelte';
-    let slug = data.slug;
-    let rows = slug.split('&');
-    let [top, mid, bot] = [rows[0], rows[1], rows[2]];
+    let slug = data.slug
 </script>
 
 <table>
-    <Row top = {top} mid = {mid} bot = {bot}/>
-    <Row top = {top} mid = {mid} bot = {bot}/>
-    <Row top = {top} mid = {mid} bot = {bot}/>
+    <Row slug = {slug} y = 'top'/>
+    <Row slug = {slug} y = 'mid'/>
+    <Row slug = {slug} y = 'bot'/>
 </table>
 
