@@ -1,16 +1,15 @@
 <script>
     export let x;
     export let y;
-    import splitSlug from '/src/lib/splitSlug.js';
-    import joinSlug from '/src/lib/joinSlug.js';
-    import update from '/src/lib/update.js';
+    import splitSlug from '/src/lib/splitSlug'
     import { page } from '$app/stores';
+    import update from '/src/lib/update.js';
     let slug = $page.params.data;
-    let data = splitSlug(slug);
-    let symbol = data[x][y];
-    console.log(joinSlug(data));
+    let data = splitSlug(slug)
+    let symbol = data[x][y]
+    let turn = 'x'
 </script>
-<a href='/'>
+<a href={update(slug, turn, x, y)}>
 <div style='height: 50px; width:50px; background-color: black;'>
     {#if symbol == 'x'}
         <div style='font-size: 30px; padding-left: 10px; padding-top: 7px'>
