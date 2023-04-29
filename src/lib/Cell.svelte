@@ -4,12 +4,11 @@
     import splitSlug from '/src/lib/splitSlug'
     import { page } from '$app/stores';
     import update from '/src/lib/update.js';
-    let slug = $page.params.data;
-    let data = splitSlug(slug)
-    let symbol = data[x][y]
+    $: data = splitSlug($page)
+    $: symbol = data[x][y]
     let turn = 'x'
 </script>
-<a href={update(slug, turn, x, y)}>
+<a href={update($page, turn, x, y)}>
 <div style='height: 50px; width:50px; background-color: black;'>
     {#if symbol == 'x'}
         <div style='font-size: 30px; padding-left: 10px; padding-top: 7px'>

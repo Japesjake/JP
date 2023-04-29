@@ -19,7 +19,8 @@ function joinSlug(data) {
     }
     return elements.join('');
 }
-export default function update(slug, turn, x, y) {
+export default function update($page, turn, x, y) {
+    let slug = $page.params.data
     let data = splitSlug(slug)
     data[x][y] = turn
     slug = joinSlug(data)
