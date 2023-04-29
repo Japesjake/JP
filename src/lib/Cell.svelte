@@ -1,15 +1,14 @@
 <script>
     export let x;
     export let y;
+    import splitSlug from '/src/lib/splitSlug.js';
+    import joinSlug from '/src/lib/joinSlug.js';
+    import update from '/src/lib/update.js';
     import { page } from '$app/stores';
     let slug = $page.params.data;
-    let [top, mid, bot] = slug.split('&');
-    let data = [
-        top.split(''),
-        mid.split(''),
-        bot.split('')
-    ]
+    let data = splitSlug(slug);
     let symbol = data[x][y];
+    console.log(joinSlug(data));
 </script>
 <a href='/'>
 <div style='height: 50px; width:50px; background-color: black;'>
