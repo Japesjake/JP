@@ -8,7 +8,7 @@
     $: symbol = data[x][y]
     let turn = 'x'
 </script>
-<a href={update($page, turn, x, y)}>
+<a href={update($page, turn, x, y)} style = 'text-decoration: none'>
 <div style='color: red; height: 50px; width:50px; background-color: black; padding: 10px 10px'>
     {#if symbol == 'x'}
         &#10060
