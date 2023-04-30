@@ -6,6 +6,5 @@ export default function update($page, turn, x, y) {
     let data = splitSlug(slug)
     data[x][y] = turn
     slug = joinSlug(data)
-    url = '/games/tic-tac-toe/' + slug
-    return url
+    return '/games/tic-tac-toe/' + slug
 }
