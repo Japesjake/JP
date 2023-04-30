@@ -1,10 +1,9 @@
-import splitSlug from {/src/lib/splitSlug.js}
-import joinSlug from {/src/lib/joinSlug.js}
+import splitSlug from '/src/lib/splitSlug.js'
+import joinSlug from '/src/lib/joinSlug.js'
 
 export default function update($page, turn, x, y) {
-    let slug = $page.params.data
-    let data = splitSlug(slug)
+    let data = splitSlug($page)
     data[x][y] = turn
-    slug = joinSlug(data)
+    let slug = joinSlug(data)
     return '/games/tic-tac-toe/' + slug
 }
