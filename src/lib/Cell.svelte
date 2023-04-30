@@ -1,7 +1,7 @@
 <script>
     export let x;
     export let y;
-    import splitSlug from '/src/lib/splitSlug'
+    import splitSlug from '/src/lib/splitSlug.js'
     import { page } from '$app/stores';
     import update from '/src/lib/update.js';
     $: data = splitSlug($page)

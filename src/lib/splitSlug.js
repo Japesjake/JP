@@ -1,7 +1,6 @@
-export default function splitSlug($page){
-    let slug = $page.params.data
+function splitSlug(slug){
     let [top, mid, bot] = slug.split('&');
-    let data = [
+        let data = [
         top.split(''),
         mid.split(''),
         bot.split('')
