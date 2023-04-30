@@ -1,6 +1,6 @@
 function splitSlug(slug){
     let [top, mid, bot] = slug.split('&');
-    let data = [
+        let data = [
         top.split(''),
         mid.split(''),
         bot.split('')

@@ -1,5 +1,4 @@
 <script>
-    export let data;
     import Row from '/src/lib/Row.svelte';
 </script>
 

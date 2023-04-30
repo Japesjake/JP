@@ -9,11 +9,9 @@
     let turn = 'x'
 </script>
 <a href={update($page, turn, x, y)}>
-<div style='height: 50px; width:50px; background-color: black;'>
+<div style='height: 50px; width:50px; background-color: black; padding: 10px 10px'>
     {#if symbol == 'x'}
-        <div style='font-size: 30px; padding-left: 10px; padding-top: 7px'>
             &#10060
-        </div>
     {/if}
 </div>
 </a>
