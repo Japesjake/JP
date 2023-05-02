@@ -7,6 +7,5 @@ export default function joinSlug(data, turn) {
         elements.push('&')
     }
     elements.push(turn)
-    console.log(elements.join(''))
     return elements.join('');
 }
