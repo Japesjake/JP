@@ -4,7 +4,7 @@
 </script>
 
 <table>
-    <div style = 'position: absolute; left: 50%; text-align: center;'>
+    <div style = 'position: absolute; left: 25%; text-align: center;'>
     <a href = '/games/tic-tac-toe/___&___&___&x'>New Game</a>
         <Row x = 0/>
         <Row x = 1/>

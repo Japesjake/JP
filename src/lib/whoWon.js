@@ -8,7 +8,6 @@ function checkCoords ($page, coords, symbol) {
         for (let y = 0; y < data[x].length; y++) {
             for (let c = 0; c < coords.length; c++) {
                 if (coords[c].toString() == [x,y].toString() && data[x][y] == symbol) {
-                    console.log('Match!')
                     counter++
                 }
             }
@@ -32,9 +31,8 @@ function checkSymbol ($page, symbol){
     }
     return isAny(bools)
 }
-export default function whoWon($page) {
+export function whoWon($page) {
     let bools = [checkSymbol($page, 'x'), checkSymbol($page, 'o')]
-    console.log(bools)
     if (bools[0]) {
         return 'x'
     } else if (bools[1]) {

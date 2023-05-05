@@ -14,6 +14,5 @@
     {:else if symbol == 'o'}
         &#11093
     {/if}
-
 </div>
 </a>

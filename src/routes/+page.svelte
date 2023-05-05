@@ -1,1 +1,1 @@
-<h1>Welcome to my website</h1>
+<h1 style = 'color: red; position: absolute; left: 25%;'>Welcome to my website.</h1>
