@@ -4,9 +4,10 @@ function checkCoords ($page, coords, symbol) {
     let [data, turn] = splitSlug($page);
     let counter = 0;
     for (let x = 0; x < data.length; x++){
-        for (let y = 0; x < data[x].length; y++) {
+        for (let y = 0; y < data[x].length; y++) {
             for (let c = 0; c < coords.length; c++) {
-                if (coords[c] == [x,y] && data[x][y] == symbol) {
+                if (coords[c].toString() == [x,y].toString() && data[x][y] == symbol) {
+                    console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!')
                     counter++
                 }
             }
@@ -16,13 +17,13 @@ function checkCoords ($page, coords, symbol) {
 }
 function checkSymbol ($page, symbol){
     let coords = [[0,0],[0,1],[0,2]]
-    let bool = true
-    // let bool = checkCoords($page, coords, symbol)
+    // let bool = true
+    let bool = checkCoords($page, coords, symbol)
     return bool
 }
 export default function whoWon($page) {
-    let bools = [true, false]
-    // let bools = [checkSymbol($page, 'x'), checkSymbol($page, 'y')]
+    let bools = [checkSymbol($page, 'x'), checkSymbol($page, 'y')]
+    console.log(bools)
     if (bools[0]) {
         return 'x'
     } else if (bools[1]) {
