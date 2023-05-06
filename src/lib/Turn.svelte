@@ -19,10 +19,12 @@
             's turn
     {:else}
         {#if winner == 'x'}
-            &#10060
+            &#10060 won!
         {:else if winner == 'o'}
-            &#11093
+            &#11093 won!
+        {:else if winner == 'cat'}
+            <img src = 'sad-face.png' alt = 'sadface'>
         {/if}
-            won!
+
     {/if}
 </h1>

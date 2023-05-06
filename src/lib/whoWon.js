@@ -49,8 +49,9 @@ export default function whoWon($page) {
         return 'x'
     } else if (bools[1]) {
         return 'o'
-    } else if (true) {
-        return '_'
-    } else if (isCat($page))
+    } else if (isCat($page)) {
         return 'cat'
+    } else {
+        return '_'
+    }
 }
