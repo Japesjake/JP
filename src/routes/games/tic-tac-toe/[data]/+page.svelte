@@ -1,6 +1,6 @@
 <script>
-    import Row from '/src/lib/Row.svelte';
-    import Turn from '/src/lib/Turn.svelte';
+    import Row from './Row.svelte';
+    import Turn from './Turn.svelte';
 </script>
 
 <table>

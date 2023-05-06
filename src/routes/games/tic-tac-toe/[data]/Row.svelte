@@ -1,5 +1,5 @@
 <script>
-    import Cell from '/src/lib/Cell.svelte';
+    import Cell from './Cell.svelte';
     export let x;
 </script>
 
