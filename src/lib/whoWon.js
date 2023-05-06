@@ -31,12 +31,26 @@ function checkSymbol ($page, symbol){
     }
     return isAny(bools)
 }
+function isCat($page) {
+    let [data, turn] = splitSlug($page)
+    for (let x = 0; x < data.length; x++) {
+        for (let y = 0; y < data[x].length; y++) {
+            if (data[x][y] == '_') {
+                return false
+            }
+        }
+    }
+    return true
+}
 export default function whoWon($page) {
     let bools = [checkSymbol($page, 'x'), checkSymbol($page, 'o')]
+    console.log(isCat($page))
     if (bools[0]) {
         return 'x'
     } else if (bools[1]) {
         return 'o'
-    }
+    } else if (true) {
         return '_'
+    } else if (isCat($page))
+        return 'cat'
 }
