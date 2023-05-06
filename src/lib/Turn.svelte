@@ -6,6 +6,7 @@
     import changeTurn from '/src/lib/changeTurn.js'
     $: [data, turn] = splitSlug($page)
     $: winner = whoWon($page)
+    import sadFace from '$lib/assets/sad-face.png'
 
     
 </script>
@@ -23,7 +24,7 @@
         {:else if winner == 'o'}
             &#11093 won!
         {:else if winner == 'cat'}
-            <img src = 'sad-face.png' alt = 'sadface'>
+            <img src = {sadFace} alt = 'sadface' width = '50px'>
         {/if}
 
     {/if}
