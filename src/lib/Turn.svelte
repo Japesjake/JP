@@ -1,7 +1,7 @@
 <script>
     import splitSlug from '/src/lib/splitSlug.js'
     import joinSlug from '/src/lib/joinSlug.js'
-    import { whoWon } from '/src/lib/whoWon.js'
+    import whoWon from '/src/lib/whoWon.js'
     import { page } from '$app/stores';
     import changeTurn from '/src/lib/changeTurn.js'
     $: [data, turn] = splitSlug($page)

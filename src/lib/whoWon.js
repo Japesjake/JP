@@ -31,7 +31,7 @@ function checkSymbol ($page, symbol){
     }
     return isAny(bools)
 }
-export function whoWon($page) {
+export default function whoWon($page) {
     let bools = [checkSymbol($page, 'x'), checkSymbol($page, 'o')]
     if (bools[0]) {
         return 'x'
