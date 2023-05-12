@@ -1,7 +1,7 @@
-import splitSlug from '/src/lib/splitSlug.js'
-import joinSlug from '/src/lib/joinSlug.js'
-import changeTurn from '/src/lib/changeTurn.js'
-import whoWon from '/src/lib/whoWon.js'
+import splitSlug from '/src/lib/tic-tac-toe/splitSlug.js'
+import joinSlug from '/src/lib/tic-tac-toe/joinSlug.js'
+import changeTurn from '/src/lib/tic-tac-toe/changeTurn.js'
+import whoWon from '/src/lib/tic-tac-toe/whoWon.js'
 export default function update($page,x, y) {
     let [data, turn] = splitSlug($page)
     let symbol = data[x][y]
@@ -10,7 +10,7 @@ export default function update($page,x, y) {
         turn = changeTurn(turn)
     }
     let slug = joinSlug(data, turn)
-    // returns current page url when the game is resolved.
+    // returns current page url when the game is won.
     if (whoWon($page) != '_') {
         return $page.params.data
     }

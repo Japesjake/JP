@@ -1,9 +1,9 @@
 <script>
-    import splitSlug from '/src/lib/splitSlug.js'
-    import joinSlug from '/src/lib/joinSlug.js'
-    import whoWon from '/src/lib/whoWon.js'
+    import splitSlug from '/src/lib/tic-tac-toe/splitSlug.js'
+    import joinSlug from '/src/lib/tic-tac-toe/joinSlug.js'
+    import whoWon from '/src/lib/tic-tac-toe/whoWon.js'
     import { page } from '$app/stores';
-    import changeTurn from '/src/lib/changeTurn.js'
+    import changeTurn from '/src/lib/tic-tac-toe/changeTurn.js'
     $: [data, turn] = splitSlug($page)
     $: winner = whoWon($page)
     import sadFace from '$lib/assets/sad-face.png'

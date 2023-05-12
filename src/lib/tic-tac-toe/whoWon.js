@@ -1,6 +1,6 @@
-import splitSlug from '/src/lib/splitSlug.js'
+import splitSlug from '/src/lib/tic-tac-toe/splitSlug.js'
 import { page } from '$app/stores'
-import winningCoords from '/src/lib/winningCoords.js'
+import winningCoords from '/src/lib/tic-tac-toe/winningCoords.js'
 function checkCoords ($page, coords, symbol) {
     let [data, turn] = splitSlug($page);
     let counter = 0;
@@ -44,7 +44,6 @@ function isCat($page) {
 }
 export default function whoWon($page) {
     let bools = [checkSymbol($page, 'x'), checkSymbol($page, 'o')]
-    console.log(isCat($page))
     if (bools[0]) {
         return 'x'
     } else if (bools[1]) {

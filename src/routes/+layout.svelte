@@ -9,9 +9,10 @@
 </nav>
 
 <h2 style='color: green;'><u><p>Games</p></u></h2>
-<li>
-    <l><a href='/games/tic-tac-toe/___&___&___&x'>Tic-Tac-Toe</a></l>
-</li>
+<ul>
+    <li><a href='/games/tic-tac-toe/___&___&___&x'>Tic-Tac-Toe</a></li>
+    <li><a href='/games/checkers'>Checkers</a></li>
+</ul>
 
 <slot />
 

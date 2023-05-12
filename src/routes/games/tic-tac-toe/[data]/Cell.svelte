@@ -1,9 +1,9 @@
 <script>
     export let x;
     export let y;
-    import splitSlug from '/src/lib/splitSlug.js'
+    import splitSlug from '/src/lib/tic-tac-toe/splitSlug.js'
     import { page } from '$app/stores';
-    import update from '/src/lib/update.js';
+    import update from '/src/lib/tic-tac-toe/update.js';
     $: [data, turn] = splitSlug($page)
     $: symbol = data[x][y]
 </script>
