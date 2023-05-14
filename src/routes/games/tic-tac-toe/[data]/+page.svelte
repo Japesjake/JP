@@ -6,9 +6,9 @@
 <table>
     <div style = 'position: absolute; left: 25%; text-align: center;'>
     <a href = '/games/tic-tac-toe/___&___&___&x'>New Game</a>
-        <Row x = 0/>
-        <Row x = 1/>
-        <Row x = 2/>
+        <Row y = 0/>
+        <Row y = 1/>
+        <Row y = 2/>
         <Turn />
     </div>
 </table>

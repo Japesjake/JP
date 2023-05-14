@@ -1,12 +1,12 @@
 <script>
     import Cell from './Cell.svelte';
-    export let x;
+    export let y;
 </script>
 
 <div class="grid-container">
-    <div class="grid-item"><Cell y = 0 x = {x}/></div>
-    <div class="grid-item"><Cell y = 1 x = {x}/></div>
-    <div class="grid-item"><Cell y = 2 x = {x}/></div>
+    <div class="grid-item"><Cell x = 0 y = {y}/></div>
+    <div class="grid-item"><Cell x = 1 y = {y}/></div>
+    <div class="grid-item"><Cell x = 2 y = {y}/></div>
 </div>
 
 <style>
