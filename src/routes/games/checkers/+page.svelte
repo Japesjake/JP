@@ -1,5 +1,9 @@
 <script>
-    import Row from './Row.svelte'
+    import Column from './Column.svelte'
 </script>
 
-<Row x = 0/>
+{#each {length: 8} as _, x}
+<div style = 'float: left;'>
+    <Column x = {x}/>
+</div>
+{/each}
