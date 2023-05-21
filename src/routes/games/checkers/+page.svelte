@@ -3,7 +3,6 @@
     import makedefault from '/src/lib/checkers/makeDefault.js'
     let data = []
     data = makedefault(data)
-    console.log(data)
 </script>
 <div style = 'position: absolute; left: 25%'>
     {#each {length: 8} as _, x}

@@ -11,20 +11,19 @@ export default function makeDefault(data) {
         for (let y = 0; y < 8; y++) {
             let counter = 0
             if (isEven(x + y)) {
-                console.log('ok')
                 data[x][y] = {color: 'black', piece: 'null', king: false}
             } else {
                 data[x][y] = {color: 'red', piece: 'null', king: false}
             }
-            if (data[x][y]['color'] = 'black' && y < 3) {
+            if (data[x][y]['color'] == 'black' && y < 3) {
                 data[x][y]['piece'] = 'red'
             } else if (y > 4) {
-                data[x][y]['piece'] = 'black'
+                data[x][y]['piece'] == 'black'
             }
         }
     }
-    data = [[{color: 'black'},{}],[{},{}]]
-    let tile = data[0][0]
-    console.log(tile['color'])
+    // data = [[{color: 'black'},{}],[{},{}]]
+    // let tile = data[0][0]
+    // console.log(tile['color'])
     return data
 }
