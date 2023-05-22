@@ -7,13 +7,14 @@ export default function makeDefault(data) {
             data[x][y] = null
         }
     }
+    console.log(data)
     for (let x = 0; x < 8; x++) {
         for (let y = 0; y < 8; y++) {
             let counter = 0
             if (isEven(x + y)) {
-                data[x][y] = {color: 'black', piece: 'null', king: false}
-            } else {
                 data[x][y] = {color: 'red', piece: 'null', king: false}
+            } else {
+                data[x][y] = {color: 'black', piece: 'null', king: false}
             }
             if (data[x][y]['color'] == 'black' && y < 3) {
                 data[x][y]['piece'] = 'red'
