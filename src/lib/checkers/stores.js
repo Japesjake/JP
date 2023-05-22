@@ -1,13 +1,17 @@
 import { writable } from 'svelte/store'
+import makeDefault from '/src/lib/checkers/makeDefault.js'
 
-function store (key ,defaultValue) {
+function store (key, defaultValue) {
     if (!localStorage.getItem(key)) {
-        let value = defaultValue;
+        var value = defaultValue;
     } else {
-        let value = JSON.parse(localStorage.getItem(key));
+        var value = JSON.parse(localStorage.getItem(key));
     }
     const write = writable(value);
     return write;
 }
 
-let defaultValue = {}
+let data = []
+let defaultValue = makeDefault(data)
+export default data = store("data", defaultValue)
+data.subscribe((value) => localStorage.data = JSON.stringify((value)))

@@ -1,10 +1,11 @@
 <script>
     export let x;
+    export let start;
     import isEven from '/src/lib/checkers/isEven.js'
     import Tile from './Tile.svelte'
 </script>
 {#each {length: 4} as _, i}
-    {#if isEven(x)}
+    {#if start == 'black'}
         <Tile x = {x} y = {i*2} color = 'black'/>
         <Tile x = {x} y = {i*2+1} color = 'red'/>
     {:else}
