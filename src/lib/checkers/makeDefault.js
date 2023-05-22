@@ -16,10 +16,12 @@ export default function makeDefault(data) {
             } else {
                 data[x][y] = {color: 'black', piece: 'null', king: false}
             }
-            if (data[x][y]['color'] == 'black' && y < 3) {
-                data[x][y]['piece'] = 'red'
-            } else if (y > 4) {
-                data[x][y]['piece'] == 'black'
+            if (data[x][y]['color'] == 'black'){
+                if (y < 3) {
+                    data[x][y]['piece'] = 'red'
+                } else if (y > 4) {
+                    data[x][y]['piece'] = 'white'
+                }
             }
         }
     }
