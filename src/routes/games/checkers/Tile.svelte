@@ -6,9 +6,9 @@
 </script>
 
 <div style='height: 50px; width: 50px; background-color: {tile['color']};'>
-{#if tile['piece'] == 'red'}
-    &#11093
-{:else if tile['piece'] == 'white'}
-    &#11093
-{/if}
+    {#if tile['piece'] == 'red'}
+        &#128308
+    {:else if tile['piece'] == 'white'}
+        &#9898
+    {/if}
 </div>
