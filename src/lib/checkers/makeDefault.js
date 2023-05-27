@@ -12,15 +12,15 @@ export default function makeDefault(data) {
         for (let y = 0; y < 8; y++) {
             let counter = 0
             if (isEven(x + y)) {
-                data[x][y] = {color: 'red', piece: 'null', king: false}
+                data[x][y] = {color: 'tan', piece: 'null', king: false}
             } else {
-                data[x][y] = {color: 'black', piece: 'null', king: false}
+                data[x][y] = {color: 'brown', piece: 'null', king: false}
             }
-            if (data[x][y]['color'] == 'black'){
+            if (data[x][y]['color'] == 'brown'){
                 if (y < 3) {
-                    data[x][y]['piece'] = 'red'
-                } else if (y > 4) {
                     data[x][y]['piece'] = 'white'
+                } else if (y > 4) {
+                    data[x][y]['piece'] = 'black'
                 }
             }
         }
