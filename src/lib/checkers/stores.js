@@ -13,18 +13,3 @@ data.subscribe((value) => {
 })
 
 export default data;
-
-// function store (key, defaultValue) {
-//     if (!localStorage.getItem(key)) {
-//         var value = defaultValue;
-//     } else {
-//         var value = JSON.parse(localStorage.getItem(key));
-//     }
-//     const write = writable(value);
-//     return write;
-// }
-
-// let data = []
-// let defaultValue = makeDefault(data)
-// export default data = store("data", defaultValue)
-// data.subscribe((value) => localStorage.data = JSON.stringify((value)))

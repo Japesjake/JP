@@ -5,16 +5,18 @@
     import blackPiece from '$lib/assets/black-circle.png'
     import data from '/src/lib/checkers/stores.js'
     let tile = $data[x][y]
+    function click() {
+        console.log('click')
+    }
 </script>
-
-<!-- <div style='height: 50px; width: 50px; background-color:   {tile['color']};'> -->
-<div id='tile' style='background-color: {tile['color']}'>
+    <div id='tile' style='background-color: {tile['color']}'>
     {#if tile['piece'] == 'black'}
         <img src={blackPiece}>
     {:else if tile['piece'] == 'white'}
         <img src={whitePiece}>
     {/if}
-</div>
+    </div>
+
 
 <style>
     img {
