@@ -8,7 +8,7 @@
     import click from '$lib/checkers/click.js'
 </script>
     <!-- <button on:click = {click}> -->
-        <div id='tile' style='background-color: {tile['color']}'>
+        <div style='background-color: {tile['color']}; height: 50px; width: 50px'>
             {#if tile['piece'] == 'black'}
                 <img src={blackPiece}>
             {:else if tile['piece'] == 'white'}
@@ -25,9 +25,4 @@
         height: 30px;
         padding: 10px;
     }
-    #tile {
-        height: 50px;
-        width: 50px;
-    }
-
 </style>
