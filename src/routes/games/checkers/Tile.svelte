@@ -7,7 +7,7 @@
     let tile = $data[x][y]
     import click from '$lib/checkers/click.js'
 </script>
-    <button on:click = {click}>
+    <!-- <button on:click = {click}> -->
         <div id='tile' style='background-color: {tile['color']}'>
             {#if tile['piece'] == 'black'}
                 <img src={blackPiece}>
@@ -15,7 +15,7 @@
                 <img src={whitePiece}>
             {/if}
         </div>
-    </button>
+    <!-- </button> -->
 
 
 

@@ -25,8 +25,5 @@ export default function makeDefault(data) {
             }
         }
     }
-    // data = [[{color: 'black'},{}],[{},{}]]
-    // let tile = data[0][0]
-    // console.log(tile['color'])
     return data
 }
