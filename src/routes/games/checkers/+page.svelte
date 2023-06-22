@@ -4,9 +4,22 @@
     import isEven from '/src/lib/checkers/isEven.js'
 </script>
 <div style = 'position: absolute; left: 25%'>
-    {#each {length: 8} as _, x}
-<div style = 'float: left'>
-        <Column x = {x}/>
+    <div class="flex-container">
+        {#each {length: 8} as _, x}
+            <div>
+                <Column x = {x}/>
+            </div>
+        {/each}
+    </div>
 </div>
-    {/each}
-</div>
+
+<style>
+    .flex-container {
+        display: flex;
+        background-color: blue
+    }
+    .flex-container > div {
+        background-color: black;
+
+    }
+</style>
