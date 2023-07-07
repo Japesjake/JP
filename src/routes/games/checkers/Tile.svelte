@@ -7,15 +7,16 @@
     let tile = $data[x][y]
     import click from '$lib/checkers/click.js'
 </script>
-    <!-- <button on:click = {click}> -->
-        <div style='background-color: {tile['color']}; height: 50px; width: 50px'>
+    <href on:click={() => click(tile)}>
+        <div style='background-color: {tile['color']}; height: 50px; width: 50px;'>
             {#if tile['piece'] == 'black'}
                 <img src={blackPiece}>
             {:else if tile['piece'] == 'white'}
                 <img src={whitePiece}>
             {/if}
         </div>
-    <!-- </button> -->
+    </href>
+
 
 
 
