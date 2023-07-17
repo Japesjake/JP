@@ -12,7 +12,7 @@ data.subscribe((value) => {
     }
 })
 
-export let selected = null;
+export let selected = false;
 initialValue = browser ? JSON.parse(localStorage.getItem('selected')) ?? selected : selected;
 selected = writable(initialValue)
 selected.subscribe((value) => {

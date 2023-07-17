@@ -7,8 +7,8 @@
     let tile = $data[x][y]
     import click from '$lib/checkers/click.js'
 </script>
-    <href on:click={() => click(x, y, $data)}>
-        <div style='background-color: {tile['color']}; height: 50px; width: 50px;' class:selected={selected}>
+    <href on:click={() => click(x, y, $data, $selected)}>
+        <div style='background-color: {tile['color']}; height: 50px; width: 50px;' class:selected={$selected}>
             {#if tile['piece'] == 'black'}
                 <img src={blackPiece}>
             {:else if tile['piece'] == 'white'}
@@ -26,7 +26,8 @@
         height: 30px;
         padding: 10px;
     }
-    .interesting {
-        background-color: black;
+    .selected {
+        border: 2px solid yellow;
+        box-sizing: border-box;
     }
 </style>
