@@ -16,7 +16,7 @@ export let selected = false;
 initialValue = browser ? JSON.parse(localStorage.getItem('selected')) ?? selected : selected;
 selected = writable(initialValue)
 selected.subscribe((value) => {
-    if (browser) {
+    // if (browser) {
         localStorage.setItem('selected', JSON.stringify(value))
-    }
+    // }
 })

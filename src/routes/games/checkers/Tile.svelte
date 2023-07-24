@@ -5,10 +5,23 @@
     import blackPiece from '$lib/assets/black-circle.png'
     import { data, selected } from '/src/lib/checkers/stores.js'
     let tile = $data[x][y]
-    import click from '$lib/checkers/click.js'
+    // import click from '$lib/checkers/click.js'
+
+    function click () {
+        if ($data[x][y]['selected']) {
+            $data[x][y]['selected'] = false;
+            $selected = false;
+        } else if (!$data[x][y]['selected'] && !$selected) {
+            $data[x][y]['selected'] = true;
+            $selected = true;
+        // } else if (!$data[x][y]['selected'] && $selected) {
+        //     pass
+        // }
+    }
+}
 </script>
-    <href on:click={() => click(x, y, $data, $selected)}>
-        <div style='background-color: {tile['color']}; height: 50px; width: 50px;' class:selected={$selected}>
+    <href on:click={() => click()}>
+        <div style='background-color: {tile['color']}; height: 50px; width: 50px;' class:selected={$data[x][y]['selected']}>
             {#if tile['piece'] == 'black'}
                 <img src={blackPiece}>
             {:else if tile['piece'] == 'white'}
