@@ -9,7 +9,7 @@
 
     function click () {
         if ($data[x][y]['selected']) {
-            $data[x][y]['selected'] = false;
+            $data[x][y]['selected'] = false
             $globals['selected'] = false;
         } else if (!$data[x][y]['selected'] && !$globals['selected']) {
             $data[x][y]['selected'] = true;
