@@ -16,9 +16,9 @@ export default function makeDefault(data) {
             }
             if (data[x][y]['color'] == 'brown'){
                 if (y < 3) {
-                    data[x][y]['piece'] = 'white'
-                } else if (y > 4) {
                     data[x][y]['piece'] = 'black'
+                } else if (y > 4) {
+                    data[x][y]['piece'] = 'white'
                 }
             }
         }

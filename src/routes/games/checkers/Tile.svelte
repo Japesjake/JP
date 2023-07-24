@@ -3,22 +3,22 @@
     export let y;
     import whitePiece from '$lib/assets/white-circle.png'
     import blackPiece from '$lib/assets/black-circle.png'
-    import { data, selected } from '/src/lib/checkers/stores.js'
+    import { data, globals } from '/src/lib/checkers/stores.js'
     let tile = $data[x][y]
     // import click from '$lib/checkers/click.js'
 
     function click () {
         if ($data[x][y]['selected']) {
             $data[x][y]['selected'] = false;
-            $selected = false;
-        } else if (!$data[x][y]['selected'] && !$selected) {
+            $globals['selected'] = false;
+        } else if (!$data[x][y]['selected'] && !$globals['selected']) {
             $data[x][y]['selected'] = true;
-            $selected = true;
+            $globals['selected'] = true;
         // } else if (!$data[x][y]['selected'] && $selected) {
         //     pass
         // }
+        }
     }
-}
 </script>
     <href on:click={() => click()}>
         <div style='background-color: {tile['color']}; height: 50px; width: 50px;' class:selected={$data[x][y]['selected']}>
