@@ -15,8 +15,3 @@
 </ul>
 
 <slot />
-
-<div style = 'position: fixed; bottom: 1em'>
-<p>Email: john.p.jaquith@gmail.com</p>
-<a href="https://www.flaticon.com/free-icons/spirituality" title="spirituality icons">Icons created by Freepik - Flaticon</a>
-</div>
