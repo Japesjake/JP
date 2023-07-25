@@ -1,10 +1,9 @@
 <script>
     export let x;
     export let y;
-    import whitePiece from '$lib/assets/white-circle.png'
-    import blackPiece from '$lib/assets/black-circle.png'
-    import { data, selected } from '/src/lib/checkers/stores.js'
-    let tile = $data[x][y]
+    import { data, selected } from '/src/lib/checkers/stores.js';
+    import Circle from '$lib/components/Circle.svelte';
+    let tile = $data[x][y];
 
     $: isSelected = $selected && $selected[0] === x && $selected[1] === y;
 
@@ -17,9 +16,13 @@
     }
 </script>
     <a href on:click={() => click()}>
-        <div style='background-color: {tile['color']}; height: 50px; width: 50px;' class:selected={isSelected}>
+        <div style='background-color: {tile['color']};' class:selected={isSelected}>
             {#if tile['piece']}
-                <img src={tile['piece'] === 'black' ? blackPiece : whitePiece} />
+                {#if tile['piece'] === 'black'}
+                    <Circle fill="black" />
+                {:else}
+                    <Circle fill="white" />
+                {/if}
             {/if}
         </div>
     </a>
@@ -36,6 +39,9 @@
 
     div {
         border: 2px solid transparent;
+        height: 50px;
+        width: 50px;
+        overflow: hidden;
     }
 
 
