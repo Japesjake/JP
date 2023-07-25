@@ -10,7 +10,7 @@
 
     $: isSelected = $data.selected && $data.selected[0] === x && $data.selected[1] === y;
 </script>
-    <a href on:click={dispatch('clickTile', [x, y])}>
+    <a href on:click|preventDefault={dispatch('clickTile', [x, y])}>
         <div style='background-color: {tile['color']};' class:selected={isSelected}>
             {#if tile['piece']}
                 {#if tile['piece'] === 'black'}
