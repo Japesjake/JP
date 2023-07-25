@@ -3,32 +3,28 @@
     export let y;
     import whitePiece from '$lib/assets/white-circle.png'
     import blackPiece from '$lib/assets/black-circle.png'
-    import { data, globals } from '/src/lib/checkers/stores.js'
+    import { data, selected } from '/src/lib/checkers/stores.js'
     let tile = $data[x][y]
-    // import click from '$lib/checkers/click.js'
+
+    $: isSelected = $selected && $selected[0] === x && $selected[1] === y;
 
     function click () {
-        if ($data[x][y]['selected']) {
-            $data[x][y]['selected'] = false
-            $globals['selected'] = false;
-        } else if (!$data[x][y]['selected'] && !$globals['selected']) {
-            $data[x][y]['selected'] = true;
-            $globals['selected'] = true;
-        // } else if (!$data[x][y]['selected'] && $selected) {
-        //     pass
-        // }
+        if (isSelected) {
+            $selected = null;
+        } else {
+            $selected = [x, y];
         }
     }
 </script>
-    <href on:click={() => click()}>
-        <div style='background-color: {tile['color']}; height: 50px; width: 50px;' class:selected={$data[x][y]['selected']}>
+    <a href on:click={() => click()}>
+        <div style='background-color: {tile['color']}; height: 50px; width: 50px;' class:selected={isSelected}>
             {#if tile['piece'] == 'black'}
                 <img src={blackPiece}>
             {:else if tile['piece'] == 'white'}
                 <img src={whitePiece}>
             {/if}
         </div>
-    </href>
+    </a>
 
 
 
@@ -39,8 +35,13 @@
         height: 30px;
         padding: 10px;
     }
+
+    div {
+        border: 2px solid transparent;
+    }
+
+
     .selected {
         border: 2px solid yellow;
-        box-sizing: border-box;
     }
 </style>

@@ -12,11 +12,12 @@ data.subscribe((value) => {
     }
 })
 
-export let globals = {selected: false, turn: 'white'};
-initialValue = browser ? JSON.parse(localStorage.getItem('globals')) ?? globals : globals;
-globals = writable(initialValue)
-globals.subscribe((value) => {
-    if (browser) {
-        localStorage.setItem('globals', JSON.stringify(value))
-    }
-})
+export let selected = null;
+
+initialValue = browser ? JSON.parse(localStorage.getItem('selected')) ?? selected : selected;
+selected = writable(initialValue)
+if (browser) {
+    selected.subscribe((value) => {
+        localStorage.setItem('selected', JSON.stringify(value))
+    })
+}
