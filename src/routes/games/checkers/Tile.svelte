@@ -18,10 +18,8 @@
 </script>
     <a href on:click={() => click()}>
         <div style='background-color: {tile['color']}; height: 50px; width: 50px;' class:selected={isSelected}>
-            {#if tile['piece'] == 'black'}
-                <img src={blackPiece}>
-            {:else if tile['piece'] == 'white'}
-                <img src={whitePiece}>
+            {#if tile['piece']}
+                <img src={tile['piece'] === 'black' ? blackPiece : whitePiece} />
             {/if}
         </div>
     </a>
