@@ -8,10 +8,13 @@
     </h1>
 </nav>
 
-<h2 style='color: green;'><u><p>Games</p></u></h2>
+<h2 style='color: green;'><u><p>Projects</p></u></h2>
 <ul>
     <li><a href='/games/tic-tac-toe/___&___&___&x'>Tic-Tac-Toe</a></li>
     <li><a href='/games/checkers'>Checkers</a></li>
+    <li><a href='/games/scheduler'>Scheduler</a></li>
+    <li><a href='/games/rpg'>Angel RPG</a></li>
+        
 </ul>
 
 <slot />

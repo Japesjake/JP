@@ -3,6 +3,7 @@
     import Game from '$lib/Game.js';
 
     let game = new Game;
+    game.updatePossibleMoves()
 </script>
 <div style = 'position: absolute; left: 25%'>
     <div style = 'display: flex;'>
