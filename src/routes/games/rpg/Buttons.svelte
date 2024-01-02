@@ -1,3 +1,3 @@
 <script>
-    import log from './stores.js'
+    import { log } from './stores.js'
 </script>

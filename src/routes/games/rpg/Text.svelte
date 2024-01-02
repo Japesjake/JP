@@ -1,1 +1,4 @@
-<input type='text'>
+<form>
+    <input type='text'>
+    <input type='submit' value='Enter'>
+</form>

@@ -10,8 +10,8 @@ log.subscribe((value) => {
     }
 })
 
-export let buttons = {''}
-let initialValue = browser ? JSON.parse(localStorage.getItem('buttons')) ?? buttons : buttons;
+export let buttons = {}
+initialValue = browser ? JSON.parse(localStorage.getItem('buttons')) ?? buttons : buttons;
 buttons = writable(initialValue)
 buttons.subscribe((value) => {
     if (browser) {
@@ -19,8 +19,8 @@ buttons.subscribe((value) => {
     }
 })
 
-export text = {'Enter your name here'}
-let initialValue = browser ? JSON.parse(localStorage.getItem('text')) ?? text : text;
+export let text = 'Welcome to Angel RPG. Enter your name:'
+initialValue = browser ? JSON.parse(localStorage.getItem('text')) ?? text : text;
 log = writable(initialValue)
 log.subscribe((value) => {
     if (browser) {
